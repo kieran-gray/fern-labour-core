@@ -4,7 +4,7 @@ from datetime import UTC, datetime
 from typing import Any, Self
 
 
-@dataclass(frozen=True, slots=True)
+@dataclass
 class DomainEvent:
     """Base class for all domain events"""
 
