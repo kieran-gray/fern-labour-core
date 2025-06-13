@@ -35,3 +35,16 @@ def test_can_serde_base_event() -> None:
     event_dict = event.to_dict()
     from_dict = DomainEvent.from_dict(event_dict)
     assert event == from_dict
+
+
+def test_can_dump_metadata() -> None:
+    event = DomainEvent(
+        id="id123",
+        type="test.event",
+        aggregate_id="test123",
+        aggregate_type="agg",
+        data={"test": "data", "also": 123},
+        time=datetime.now(UTC),
+    )
+    metadata = event.metadata()
+    assert isinstance(metadata, dict)

@@ -48,3 +48,10 @@ class DomainEvent:
             "data": self.data,
             "time": self.time.isoformat(),
         }
+
+    def metadata(self) -> dict[str, Any]:
+        return {
+            "id": self.id,
+            "aggregate_id": self.aggregate_id,
+            "time": self.time.isoformat(),
+        }
