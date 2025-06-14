@@ -1,7 +1,7 @@
 [project]
 classifiers = ["Private :: Do Not Upload"]
 name = "fern-labour-core"
-version = "0.2.2"
+version = "0.2.3"
 description = "Base package for Fern Labour python services."
 readme = "README.md"
 authors = [
